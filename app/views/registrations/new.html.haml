@@ -10,7 +10,7 @@
       %h2
         会員登録する
       - @user.errors.each do |attr, message|
-        .alert.alert-danger= attr.to_s + " " +message
+        .alert.alert-danger= message
       .form-group
         = f.label :name, "ユーザーID: @hogehoge", class: "control-label"
         = f.text_field :name, class: "form-control"

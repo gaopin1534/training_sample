@@ -1,8 +1,8 @@
 .col-xs-8#users-content
   .user-info
     %span.user-name
-      = @user.name
+      = render_user_screen_name(@user)
       %span.user-id
-        @#{user.name}
+        @#{@user.name}
       .bio
         = @user.bio
