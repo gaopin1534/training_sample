@@ -1,15 +1,10 @@
-%h1 Listing users
-
-%table
-  %thead
-    %tr
-      %th
-
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= links_to user.name, user
-
-%br
-
-= link_to 'New User', new_user_path
+.col-xs-8#users-content
+  .list-group
+    .list-group-item.user-list
+      %h2 ユーザー一覧
+    = div_for @users, class: "list-group-item" do |u|
+      %h4.user
+        %span.user-id
+          @#{u.name}
+      .bio
+        = u.bio
