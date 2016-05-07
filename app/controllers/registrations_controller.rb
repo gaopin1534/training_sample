@@ -5,7 +5,6 @@ class RegistrationsController < ApplicationController
 
   def create
     @user = User.new(params_user)
-
     if @user.save
       redirect_to root_url
     else
