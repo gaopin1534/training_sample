@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tweets
   resource :settings
   resources :users
   resource :registrations, only: [:new, :create]

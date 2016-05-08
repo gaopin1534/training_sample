@@ -5,6 +5,9 @@
       このサイトは練習用なんじゃ
     %p.by
       開発者なんていない。そんなものはいないんだ。
+    - if notice
+      %p
+        .alert.alert-info= notice
   .col-xs-6.right-content
     = form_for @user, url: registrations_path, method: :post do |f|
       %h2

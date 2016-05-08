@@ -15,6 +15,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    logout
+    redirect_to root_url, notice: "you logged out"
+  end
+
   private
     def params_user
       params.require(:user).permit(:email, :password)
